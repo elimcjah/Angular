@@ -1,30 +1,34 @@
 import {
-    Component,
-    OnInit
+  Component,
+  OnInit
 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'home',
-    styles: [`
-    `],
-    template: `
-    <h1>Sasa</h1>
+  selector: '',
+
+  template: `
     <div>
-      Sasa is the greatest!
-      <pre>npm run start:hmr</pre>
+      <h1 style=text-align:center>Students</h1>
     </div>
-    <div>
-      <h3>
-        I am the greatest ever!
-      </h3>
+    <div style = "display: flex; width: 100%"> 
+      
+        <div style = "flex-grow: 1" template="ngFor let user of users">
+        <a href="#/about">
+        <img src="{{ user.img }}"/> 
+        </a>
+        {{ user.name }}
+        
+        </div>
+    
     </div>
-    <pre>this.localState = {{ localState | json }}</pre>
+    
   `
 })
-export class TeacherComponent implements OnInit {
 
-  public localState: any;
+export class TeacherComponent implements OnInit {
+  public users = ["", {name: 'John Cena', img:'a'}, 
+{name: 'Oliver McClendon', img:'b'}, {name: 'Billy Maddison', img:'c'}];
   constructor(
     public route: ActivatedRoute
   ) {}
