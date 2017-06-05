@@ -8,9 +8,12 @@ import { AppComponent } from './app.component';
 import { RouterModule, PreloadAllModules} from '@angular/router';
 import { ROUTES } from './app.routes';
 
+import { NoContentComponent } from './no-content';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NoContentComponent
   ],
   imports: [
     BrowserModule,
