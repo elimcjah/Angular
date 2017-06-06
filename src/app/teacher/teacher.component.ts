@@ -1,39 +1,130 @@
-import {
-    Component,
-    OnInit
-} from '@angular/core';
+ import {
+   Component,
+   OnInit
+ } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'home',
-    styles: [`
-    `],
-    template: `
-    <h1>Sasa</h1>
+  selector: '',
+  
+  template: `
+  <style> .students{
+   flex-grow: 1; padding:5em;}
+  </style>
+         <div style="position:relative; flex-grow:1;">
+             <div style="position:absolute; top:0; bottom:0; right:0; left:0; overflow: scroll;">
+             </div>
+           </div>
     <div>
-      Sasa is the greatest!
-      <pre>npm run start:hmr</pre>
+      <h1 style=text-align:center>Students</h1>
     </div>
-    <div>
-      <h3>
-        I am the greatest ever!
-      </h3>
+    <div style= "display:flex; flex-direction:column; height:100%;">
+    <div style = "display: flex; width: 100%; flex-wrap: wrap;">
+
+        <div class= "students" template="ngFor let user of users">
+        <a href="#/about">
+        <img src="{{ user.img }}"/>
+        </a>
+        {{ user.name }}
+
+        </div>
+        </div>
     </div>
-    <pre>this.localState = {{ localState | json }}</pre>
   `
 })
-export class TeacherComponent implements OnInit {
 
-  public localState: any;
+export class TeacherComponent implements OnInit {
+  public users = [{ name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }, { name: 'John Cena', img: 'a' },
+    { name: 'Oliver McClendon', img: 'b' }, { name: 'Billy Maddison', img: 'c' }];
   constructor(
     public route: ActivatedRoute
-  ) {}
+  ) { }
 
   public ngOnInit() {
     this.route
       .data
       .subscribe((data: any) => {
-        this.localState = data.yourData;
+        // this.localState = data.yourData;
       });
 
     console.log('hello `Home` component');

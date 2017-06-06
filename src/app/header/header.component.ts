@@ -5,23 +5,23 @@ import {
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'about',
+    selector: 'header',
     styles: [`
    `],
     template: `
-  <div id="navbar">
-
-        <ul>
-            <li>Need 1</li>
-            <li>To 2</li>
-            <li>Make 3</li>
-            <li>This 4</li>
-            <li>Better 5</li>
-        </ul>
-
+  <!-- core/navbar.component.html -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand"><button id="home">Welcome</button></a>
+            <a class="navbar-brand"><button id="student">Students</button></a>
+            <a class="navbar-brand"><button id="games">Games</button></a>
+            <a class="navbar-brand"><button id="add">+ Student</button></a>
+            <a class="navbar-brand"><button id="login">Login</button></a>
+        </div>
+        
     </div>
-
-
+</nav>
 `
 })
 export class HeaderComponent implements OnInit {
