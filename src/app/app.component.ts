@@ -6,31 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 
   template: `
-    <nav>
-      <a [routerLink]=" ['./'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Index
-      </a>
-      <a [routerLink]=" ['./home'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Home
-      </a>
-      <a [routerLink]=" ['./detail'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Detail
-      </a>
-      <a [routerLink]=" ['./barrel'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        Barrel
-      </a>
-      <a [routerLink]=" ['./about'] "
-        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
-        About
-      </a>
-    </nav>
-
-    <main style="height: 100%;">
     
+    <main>
+    <!-- core/navbar.component.html -->
+<nav class="navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand"><button id="student">All Student</button></a>
+            <a class="navbar-brand"><button id="games">Games</button></a>
+            <a class="navbar-brand"><button id="add">Add Student</button></a>
+            <a class="navbar-brand"><button id="login">Login</button></a>
+        </div>
+        
+    </div>
+</nav>
       <router-outlet></router-outlet>
     </main>
   `
