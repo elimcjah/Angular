@@ -4,10 +4,9 @@
 }
 
 .navbar-brand {
-
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   width: 100%;
-  padding: 8px 16px;
   flex-grow: 1;
   vertical-align: fixed;
   line-height: 50px;
@@ -27,12 +26,11 @@
   left: 0;
   height: 50px;
 }
-  .navbar-brand:last-child {
-    color: red;
-    position: relative; 
+  
     
-  }
+  
   #login {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: red;
     font-style: bold;
     outline: none;
@@ -41,20 +39,29 @@
     
   }
   #add {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     outline: none;
     background-color: #3e474f;
   }
   #games {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     outline: none;
     background-color: #3e474f;
   }
   #student {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     outline: none;
     background-color: #3e474f;
   
+  }
+  #home {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    outline: none;
+    background-color: #3e474f;
   }
   
 
