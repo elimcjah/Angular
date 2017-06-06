@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar-header {
+  display: flex;
+}
+
+.navbar-brand {
+
+  color: white;
+  width: 100%;
+  padding: 8px 16px;
+  flex-grow: 1;
+  vertical-align: fixed;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  
+
+}
+
+.navbar {
+  background: #3e474f;
+  z-index: 100;
+  transition: height 600ms 0s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 50px;
+}
+  .navbar-brand:last-child {
+    color: red;
+    position: relative; 
+    
+  }
+  #login {
+    color: red;
+    font-style: bold;
+    outline: none;
+    background-color: #3e474f;
+    font-family: sans-serif;
+    
+  }
+  #add {
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  }
+  #games {
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  }
+  #student {
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  
+  }
+  
+
+
+
