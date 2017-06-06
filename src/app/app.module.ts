@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { TeacherComponent } from './teacher';
 import { AppComponent } from './app.component';
 
 import { RouterModule, PreloadAllModules} from '@angular/router';
@@ -13,6 +13,7 @@ import { NoContentComponent } from './no-content';
 @NgModule({
   declarations: [
     AppComponent,
+    TeacherComponent,
     NoContentComponent
   ],
   imports: [
