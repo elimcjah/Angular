@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 
   template: `
     
-    <main>
+    <main style="display: flex-direction:column; height:100%;">
     <!-- core/navbar.component.html -->
 <nav class="navbar">
     <div class="container-fluid">

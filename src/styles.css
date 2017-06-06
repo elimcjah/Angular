@@ -22,7 +22,6 @@
   background: #3e474f;
   z-index: 100;
   transition: height 600ms 0s ease;
-  position: fixed;
   top: 0;
   right: 0;
   left: 0;
