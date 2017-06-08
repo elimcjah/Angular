@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
     
     <main style="display: flex-direction:column; height:100%;">
     <!-- core/navbar.component.html -->
+    <div class="filler"></div>
 <nav class="navbar">
     <div class="container-fluid">
         <div class="navbar-header">
