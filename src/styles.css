@@ -2,7 +2,9 @@
 .navbar-header {
   display: flex;
 }
-
+.filler {
+  height:50px;
+}
 .navbar-brand {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
@@ -21,7 +23,9 @@
   background: #3e474f;
   z-index: 100;
   transition: height 600ms 0s ease;
+
   position: fixed;
+
   top: 0;
   right: 0;
   left: 0;
