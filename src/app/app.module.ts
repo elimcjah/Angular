@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header';
 import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
+import { AddStudentComponent} from'./add_student';
 
 import { AppComponent } from './app.component';
 
@@ -19,6 +20,7 @@ import { NoContentComponent } from './no-content';
     HeaderComponent,
     TeacherComponent,
     StudentComponent,
+    AddStudentComponent,
     NoContentComponent
       ],
   imports: [

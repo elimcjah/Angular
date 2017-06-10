@@ -23,7 +23,7 @@ import { ActivatedRoute } from '@angular/router';
     <div style = "display: flex; width: 100%; flex-wrap: wrap;">
 
         <div class= "students" template="ngFor let user of users">
-        <a href="#/about">
+        <a href="#/student">
         <img src="{{ user.img }}"/>
         </a>
         {{ user.name }}
