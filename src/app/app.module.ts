@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header';
-import { TeacherComponent } from './teacher';
+import { TeacherComponent } from'./teacher';
+import { AddStudentComponent} from'./add_student';
 
 import { AppComponent } from './app.component';
 
@@ -17,7 +18,8 @@ import { NoContentComponent } from './no-content';
     AppComponent,
     HeaderComponent,
     TeacherComponent,
-    NoContentComponent
+    NoContentComponent,
+    AddStudentComponent
       ],
   imports: [
     BrowserModule,
