@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
 .single_student{
-  
+
 }
 
 .navbar-header {
@@ -32,9 +31,9 @@
   height: 50px;
   position: fixed;
 }
-  
-    
-  
+
+
+
   #login {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: red;
@@ -42,7 +41,7 @@
     outline: none;
     background-color: #3e474f;
     font-family: sans-serif;
-    
+
   }
   #add {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -61,7 +60,7 @@
     color: white;
     outline: none;
     background-color: #3e474f;
-  
+
   }
   #home {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -69,9 +68,3 @@
     outline: none;
     background-color: #3e474f;
   }
-  
-
-
-
-=======
->>>>>>> 9a9fb20b87b000b2634ba793052cc5087c44c736
