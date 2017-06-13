@@ -12,7 +12,7 @@ export const ROUTES: Routes = [
   { path: '',      component: TeacherComponent },
   { path: 'header',component: HeaderComponent },
   { path: 'home',  component: TeacherComponent },
-  { path: 'student', component: StudentComponent },
+  { path: 'student', component: StudentComponent},
   { path: 'add',   component: AddStudentComponent },
   { path: '**',    component: NoContentComponent }
   
