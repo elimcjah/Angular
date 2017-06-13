@@ -2,6 +2,7 @@ import {
     Component,
     OnInit
 } from '@angular/core';
+import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -23,7 +24,7 @@ import { ActivatedRoute } from '@angular/router';
     <br>
     Age: <input [(ngModel)]= "data.age" #ctrl="ngModel"><br>
         <br><br>
-        <button type="submit" value="Submit">Save&Submit</button>
+        <button type="submit" onclick="submitStuInfo">Save&Submit</button>
         
    
     </div>
@@ -31,16 +32,23 @@ import { ActivatedRoute } from '@angular/router';
          `
 })
 export class AddStudentComponent implements OnInit {
-    public data = {fname: 'Sasa',
-                   lname: 'is',
-                   nkname: 'loosing',
-                   dob: 'his',
-                   stid: 'mojo!!!',
-                   age: 'Ohhh Shit!'  }
+    public data = {
+        fname: 'Sasa',
+        lname: 'is',
+        nkname: 'loosing',
+        dob: 'his',
+        stid: 'mojo!!!',
+        age: 'Ohhh Shit!'
+    }
     constructor(
-        public route: ActivatedRoute
-        
-    ) { }
+        public route: ActivatedRoute,
+        private http: Http) {
+        http.get('http://google.com')
+            .subscribe((res)=>{
+                console.log(res);
+            })
+    }
+
 
     public ngOnInit() {
         this.route
