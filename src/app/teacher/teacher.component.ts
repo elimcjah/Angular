@@ -12,15 +12,14 @@ import { ActivatedRoute } from '@angular/router';
    flex-grow: 1; padding:5em;}
   </style>
          <div style="position:relative; flex-grow:1;">
+         
              <div style="position:absolute; top:0; bottom:0; right:0; left:0; overflow: scroll;">
              </div>
            </div>
-    <div>
-      <h1 style=text-align:center>Students</h1>
-    </div>
     <div style= "display:flex; flex-direction:column; height:100%;">
+    <h1 style=text-align:center>Students</h1>
     <div style = "display: flex; width: 100%; flex-wrap: wrap;">
-
+     
         <div class= "students" template="ngFor let user of users">
         <a href="#/student">
         <img src="{{ user.img }}"/>
