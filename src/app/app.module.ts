@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header';
 import { TeacherComponent } from './teacher';
+import { StudentComponent } from './student';
 
 import { AppComponent } from './app.component';
 
@@ -17,6 +18,7 @@ import { NoContentComponent } from './no-content';
     AppComponent,
     HeaderComponent,
     TeacherComponent,
+    StudentComponent,
     NoContentComponent
       ],
   imports: [

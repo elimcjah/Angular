@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.single_student{
+  
+}
+
 .navbar-header {
   display: flex;
 }
@@ -15,8 +19,6 @@
   text-align: center;
   text-decoration: none;
   border-radius: 4px;
-  
-
 }
 
 .navbar {
@@ -27,6 +29,7 @@
   right: 0;
   left: 0;
   height: 50px;
+  position: fixed;
 }
   
     
