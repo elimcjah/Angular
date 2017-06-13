@@ -2,6 +2,7 @@
    Component,
    OnInit
  } from '@angular/core';
+ import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -18,7 +19,7 @@ import { ActivatedRoute } from '@angular/router';
            </div>
     
            <div>
-           <img src= "{{ users.img }}" />
+           <img src= "" />
     <h1 style=text-align:center>  </h1>
     </div>
     <div style= "height: 500px; width:500px;">
@@ -49,10 +50,19 @@ export class StudentComponent implements OnInit {
     
   public users = [{ name: 'Colors', img: 'a' },
     { name: 'Shapes', img: 'b' }, { name: 'Numbers', img: 'c' }];
-
+  private addStudentUrl = 'http://www.parentingnation.in/Resources/articleimages/actual/668.jpg';
   constructor(
-    public route: ActivatedRoute
-  ) { }
+    public route: ActivatedRoute,
+    private http: Http 
+  ) {
+    this.http.get(this.addStudentUrl).subscribe((response)=>{
+        console.log(response);
+      })
+    }
+    getAddStudentComponent(){
+      
+    }
+
 
   public ngOnInit() {
     this.route
