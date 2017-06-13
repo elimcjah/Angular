@@ -5,14 +5,9 @@ import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header';
 import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
-<<<<<<< HEAD
-=======
 import { AddStudentComponent} from'./add_student';
-
->>>>>>> 9a9fb20b87b000b2634ba793052cc5087c44c736
-
+import { ChartsModule } from 'ng2-charts';
 import { AppComponent } from './app.component';
-
 import { RouterModule, PreloadAllModules} from '@angular/router';
 import { ROUTES } from './app.routes';
 
@@ -24,16 +19,14 @@ import { NoContentComponent } from './no-content';
     HeaderComponent,
     TeacherComponent,
     StudentComponent,
-<<<<<<< HEAD
-=======
     AddStudentComponent,
->>>>>>> 9a9fb20b87b000b2634ba793052cc5087c44c736
     NoContentComponent
       ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    ChartsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
   ],
   providers: [],
