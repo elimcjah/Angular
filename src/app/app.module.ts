@@ -7,6 +7,7 @@ import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
 import { AddStudentComponent} from'./add_student';
 
+
 import { AppComponent } from './app.component';
 
 import { RouterModule, PreloadAllModules} from '@angular/router';

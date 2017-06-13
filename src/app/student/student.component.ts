@@ -17,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
            </div>
            <div>
            <img src="{{ user.img }}"/>
-    <h1 style=text-align:center> {{ user.name }} </h1>
+    <h1 style=text-align:center></h1>
     </div>
     <div style= "display:flex; flex-direction:column; height:100%;">
     <div style = "display: flex; width: 100%; flex-wrap: wrap;">

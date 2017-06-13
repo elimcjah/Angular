@@ -5,6 +5,12 @@
 .filler {
   height:50px;
 }
+#logo {
+    width: 100%;
+    height: auto;
+  }
+
+
 .navbar-brand {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
@@ -20,7 +26,7 @@
 }
 
 .navbar {
-  background: #3e474f;
+  background: lightgrey;
   z-index: 100;
   transition: height 600ms 0s ease;
   position: fixed;
@@ -67,6 +73,7 @@
     outline: none;
     background-color: #3e474f;
   }
+  
   
 
 
