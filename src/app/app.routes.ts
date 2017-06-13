@@ -6,6 +6,8 @@ import { StudentComponent } from './student';
 import { AddStudentComponent } from './add_student';
 
 
+
+
 export const ROUTES: Routes = [
   { path: '',      component: TeacherComponent },
   { path: 'header',component: HeaderComponent },

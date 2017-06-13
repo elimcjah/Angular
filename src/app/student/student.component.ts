@@ -4,6 +4,7 @@ import {
  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
+
 @Component({
   selector: '',
   
@@ -16,27 +17,30 @@ import { ActivatedRoute } from '@angular/router';
              </div>
            </div>
            <div>
-           <img src="{{ user.img }}"/>
-    <h1 style=text-align:center> {{ user.name }} </h1>
+           <img src= "{{ users.img }}" />
+    <h1 style=text-align:center>  </h1>
     </div>
+    <div style= "height: 500px; width:500px;">
+    <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+                </div>
     <div style= "display:flex; flex-direction:column; height:100%;">
     <div style = "display: flex; width: 100%; flex-wrap: wrap;">
-
-        <div class= "students" template="ngFor let user of users">
-        <a href="#/student">
-        <img src="{{ user.img }}"/>
-        </a>
-        {{ user.name }}
-
+        
         </div>
-        </div>
+    
     </div>
   `
 })
-
 export class StudentComponent implements OnInit {
-  public users = [{ name: 'Colors', img: 'a' },
-    { name: 'Shapes', img: 'b' }, { name: 'Numbers', img: 'c' }];
+  
   constructor(
     public route: ActivatedRoute
   ) { }
