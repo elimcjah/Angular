@@ -3,11 +3,15 @@
   display: flex;
 }
 .filler {
+  display: flex;
   height:100px;
+  
 }
 #logo {
     width: 100%;
     height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
   }
 
 
@@ -26,7 +30,7 @@
 }
 
 .navbar {
-  background:#3EE8E8;
+  background:#80deea;
   z-index: 100;
   transition: height 600ms 0s ease;
   position: fixed;
@@ -35,10 +39,17 @@
   left: 0;
   bottom:0;
   height: 100px;
+
 }
-  
-    
-  
+.brnav {
+  background-color: #6d4c41;
+
+}
+
+#stunav {
+  color: #80deea;
+}
+
   #login {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: red;

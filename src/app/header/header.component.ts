@@ -12,8 +12,8 @@ import { ActivatedRoute } from '@angular/router';
   <main style="display: flex-direction:column; height:100%;">
     <!-- core/navbar.component.html -->
     <div class="filler"></div>
-<nav class="navbar">
-    <div class="container-fluid">
+<div class="navbar">
+    <div class="brnav"></div>
         <div class="navbar-header">
             <div><img id= "logo" src = "./assets/images/logo.png"></div>
             <a class="navbar-brand" href = "#/welcome"><button id="welcome">Welcome</button></a>
@@ -23,8 +23,8 @@ import { ActivatedRoute } from '@angular/router';
             <a class="navbar-brand"><button id="login">Login</button></a>
         </div>
         
-    </div>
-</nav>
+    
+</div>
       <router-outlet></router-outlet>
     </main>
 `
