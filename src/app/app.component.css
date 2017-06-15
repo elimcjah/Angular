@@ -3,7 +3,7 @@
   display: flex;
 }
 .filler {
-  height:50px;
+  height:100px;
 }
 #logo {
     width: 100%;
@@ -26,7 +26,7 @@
 }
 
 .navbar {
-  background: lightgrey;
+  background:#3EE8E8;
   z-index: 100;
   transition: height 600ms 0s ease;
   position: fixed;
@@ -34,7 +34,7 @@
   right: 0;
   left: 0;
   bottom:0;
-  height: 50px;
+  height: 100px;
 }
   
     
