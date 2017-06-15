@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HeaderComponent } from './header';
+import { WelcomeComponent} from './welcome';
 import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
 import { AddStudentComponent} from'./add_student';
@@ -17,6 +18,7 @@ import { NoContentComponent } from './no-content';
   declarations: [
     AppComponent,
     HeaderComponent,
+    WelcomeComponent,
     TeacherComponent,
     StudentComponent,
     AddStudentComponent,

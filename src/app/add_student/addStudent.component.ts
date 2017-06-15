@@ -43,7 +43,7 @@ export class AddStudentComponent implements OnInit {
     constructor(
         public route: ActivatedRoute,
         private http: Http) {
-        http.get('http://google.com')
+        http.get('https://openweathermap.org/api')
             .subscribe((res)=>{
                 console.log(res);
             })

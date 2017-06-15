@@ -14,7 +14,7 @@ import { Component } from '@angular/core';
     <div class="container-fluid">
         <div class="navbar-header">
             <div><img id= "logo" src = "./assets/images/logo.png"></div>
-            <a class="navbar-brand"><button id="home">Welcome</button></a>
+            <a class="navbar-brand" href = "#/welcome"><button id="welcome">Welcome</button></a>
             <a class="navbar-brand" href = "#/home"><button id="student">Students</button></a>
             <a class="navbar-brand"><button id="games">Games</button></a>
             <a class="navbar-brand" href = "#/add"><button id="add">+ Student</button></a>
