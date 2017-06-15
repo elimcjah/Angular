@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+//import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { HeaderComponent } from './header';
 import { WelcomeComponent} from './welcome';
 import { TeacherComponent } from './teacher';
@@ -31,7 +31,7 @@ import { NoContentComponent } from './no-content';
     HttpModule,
     ChartsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
-IonicModule.forRoot(MyApp),
+//IonicModule.forRoot(MyApp),
   ],
   providers: [],
   bootstrap: [AppComponent]
