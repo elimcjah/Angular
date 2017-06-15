@@ -12,7 +12,11 @@ var knex = require('knex')({
 });
 var multer = require('multer')
 var upload = multer({ dest: 'uploads/' })
+var body = require('body-parser') 
 
+
+app.use('/static', express.static('public'))
+app.use(body.urlencoded())
 // console.log(
 // knex('rory_table')
 // .select()
@@ -25,18 +29,36 @@ app.post('/avatar', upload.single('avatar'), function (req, res, next) {
         .update({
             image_url: req.file.path
         })
-        .where('id', 1)
+        .where('id', 2)
         .then(function (qwer) {
             res.send('qwer')
         })
 })
 
-app.use('/static', express.static('public'))
-
-app.get('/', function (req, res) {
-    res.send('Hell World!')
-    console.log(req.params.id)
+app.post('/first', function (req, res) {
+       console.log(req.body)
+       knex('students')
+       .insert({ first_name: req.body.first_name })
+       .then(function (qwer){
+           res.send('qwer')
+       })
 })
+
+// app.post('/info',(req,res)=>{
+//     res.send('ok')
+// })
+
+app.post('/last', function (req, res) {
+       console.log(req.body)
+       knex('students')
+       .insert({ last_name: req.body.last_name })
+       .then(function (qwer){
+           res.send('qwer')
+       })
+})
+
+
+// appc
 
 app.get('/analytics/:id', function (req, res) {
     let id = req.params.id
