@@ -1,0 +1,6 @@
+export * from './addStudent.component';
+<<<<<<< HEAD
+//change example
+=======
+//gobbledigook
+>>>>>>> eac5885f45f1ff741219e0a407ed7c1066e96a4d
