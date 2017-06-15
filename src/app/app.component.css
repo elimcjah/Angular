@@ -4,7 +4,7 @@
 }
 .filler {
   display: flex;
-  height:100px;
+  height:110px;
   
 }
 #logo {
@@ -43,11 +43,16 @@
 }
 .brnav {
   background-color: #6d4c41;
+  height: 40px;
+  
 
 }
 
-#stunav {
+#stunav {  /* the text style and color*/
   color: #80deea;
+  font-family: 'Roboto', sans-serif;
+  text-indent: 30px;
+  
 }
 
   #login {

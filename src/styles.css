@@ -1,8 +1,8 @@
 
 /* You can add global styles to this file, and also import other style files */
-.single_student{
-  
-}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
 
 .navbar-header {
   display: flex;
