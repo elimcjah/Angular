@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100');
 
 
-#welctitle {
+#logintitle { /* style for the title in the login page*/
     font-family: 'Roboto', sans-serif;
     color: #80deea; 
   }

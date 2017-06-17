@@ -2,12 +2,12 @@
 .navbar-header {
   display: flex;
 }
-.filler {
+.filler {  /* spacing to allow  Student Text to appear below fixed header*/
   display: flex;
   height: 120px;
   
 }
-#logo {
+#logo {  
     width: 100%;
     height: auto;
     margin-top: 20px;

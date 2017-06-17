@@ -33,12 +33,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AddStudentComponent implements OnInit {
     public data = {
-        fname: 'Sasa',
-        lname: 'is',
-        nkname: 'loosing',
-        dob: 'his',
-        stid: 'mojo!!!',
-        age: 'Ohhh Shit!'
+        fname: '',
+        lname: '',
+        nkname: '',
+        dob: '',
+        stid: '',
+        age: ''
     }
     constructor(
         public route: ActivatedRoute,

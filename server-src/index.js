@@ -57,6 +57,14 @@ app.post('/last', function (req, res) {
        })
 })
 
+app.post('/user_pass', function (req, res) {
+    console.log(req.body)
+    //.insert({ })
+    
+        res.send('qwer')
+    
+})
+
 
 // appc
 
