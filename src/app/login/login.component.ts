@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'login',
     template: `
-    <h1 id = "logintitle">Welcome Teachers & Parents</h1>
+    <h1 id = "logintitle">Welcome to Hell!! Teachers & Parents</h1>
     <h2> Please login below to access your class</h2>
     <body>
     <div class = "login-forms">
@@ -33,17 +33,18 @@ export class LoginComponent implements OnInit {
 
     }
     public clicked(){
+        //http post request to the server
         this.http.post('http://localhost:3000/user_pass' , this.userdata)
              .subscribe((res)=>{
                  console.log(res);
              })
-        console.log('submit pass', this.userdata.usname)
+        console.log('submit pass', this.userdata)
     }
 
 
     constructor(
         public route: ActivatedRoute,
-        public http: Http) {
+        private http: Http) {
             
         }
     
