@@ -19,20 +19,8 @@ import { ActivatedRoute } from '@angular/router';
            </div>
     <div>Hello World</div>
            <div>
-           <img src= "" />
-    <h1 style=text-align:center>  </h1>
-    </div>
-    <div style= "height: 500px; width:500px;">
-    <canvas baseChart width="400" height="400"
-                [datasets]="lineChartData"
-                [labels]="lineChartLabels"
-                [options]="lineChartOptions"
-                [colors]="lineChartColors"
-                [legend]="lineChartLegend"
-                [chartType]="lineChartType"
-                (chartHover)="chartHovered($event)"
-                (chartClick)="chartClicked($event)"></canvas>
-                </div>
+           <img src=""/>
+           </div>
     <div style= "display:flex; flex-direction:column; height:100%;">
     
       

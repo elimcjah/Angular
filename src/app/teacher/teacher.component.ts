@@ -7,38 +7,8 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: '',
   
-  template: `
-  <style> .students{
-   flex-grow: 1; padding:5em;}
-   img{
-     width:100%; height:auto;
-   }
-  </style>
-         <div style="position:relative; flex-grow:1;">
-         
-             <div style="position:absolute; top:0; bottom:0; right:0; left:0; overflow: scroll;">
-             </div>
-           </div>
-    <div style= "display:flex; flex-direction:column; height:100%;">
-    <h1 style=text-align:center>Students</h1>
-    <div style = "display: flex; width: 100%; flex-wrap: wrap;">
-     
-        <div style=text-align:center class= "students" template="ngFor let user of users">
-        <div style="border: 1px solid brown;">
-        <a href="#/student">
-        <img src="{{user.img}}"/>
-        </a>
-        <div style="text-align:center; font: roboto thin;" style="background-color: brown">
-        {{ user.name }}
-        </div>
-        </div>
-          <div style="border: 5px solid yellow">
-
-          </div>
-        </div>
-        </div>
-    </div>
-  `
+  templateUrl: './teacher.component.html'
+  
 })
 
 export class TeacherComponent implements OnInit {

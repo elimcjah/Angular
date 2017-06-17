@@ -1,0 +1,34 @@
+<style>
+  .students {
+    flex-grow: 1;
+    padding: 5em;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+<div style="position:relative; flex-grow:1;">
+
+  <div style="position:absolute; top:0; bottom:0; right:0; left:0; overflow: scroll;">
+  </div>
+</div>
+<div style="display:flex; flex-direction:column; height:100%;">
+
+  <div style="display: flex; width: 100%; flex-wrap: wrap;">
+
+    <div style=text-align:center class="students" template="ngFor let user of users">
+      <a href="#/student">
+        <div style="width: 160px; height: 150px; background-size: cover;" [ngStyle]="{'background-image': 'url(' + user.img + ')'}">
+        </div>
+        <div style="text-align:center; font: roboto thin;" style="color: white; background-color: brown">
+          {{ user.name }}
+        </div>
+        <div style="border: 5px solid yellow">
+
+
+        </div>
+        </a>
+    </div>
+  </div>

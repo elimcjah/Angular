@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar-header {
+  display: flex;
+}
+.filler {
+  display: flex;
+  height: 120px;
+  
+}
+#logo {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+
+.navbar-brand {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  width: 100%;
+  flex-grow: 1;
+  vertical-align: fixed;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  
+
+}
+
+.navbar {
+  background:#80deea;
+  z-index: 100;
+  transition: height 600ms 0s ease;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom:0;
+  height: 100px;
+
+}
+.brnav {
+  background-color: #6d4c41;
+  height: 50px;
+  
+
+}
+
+#stunav {  /* the text style and color*/
+  color: #80deea;
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  text-indent: 30px;
+<<<<<<< HEAD
+  
+  
+  
+=======
+  
+  
+  
+>>>>>>> 8ddd7dbb09a9a9310ef16b7d307cb8cc65324e29
+}
+
+  #login {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
+    font-style: bold;
+    outline: none;
+    background-color: #3e474f;
+    font-family: sans-serif;
+    
+  }
+  #add {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  }
+  #games {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  }
+  #student {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  
+  }
+  #home {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  }
+  #welcome {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    outline: none;
+    background-color: #3e474f;
+  }
+
+  
+  
+  
+
+
