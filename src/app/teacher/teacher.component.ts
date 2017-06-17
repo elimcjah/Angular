@@ -10,6 +10,9 @@ import { ActivatedRoute } from '@angular/router';
   template: `
   <style> .students{
    flex-grow: 1; padding:5em;}
+   img{
+     width:100%; height:auto;
+   }
   </style>
          <div style="position:relative; flex-grow:1;">
          
@@ -20,12 +23,18 @@ import { ActivatedRoute } from '@angular/router';
     <h1 style=text-align:center>Students</h1>
     <div style = "display: flex; width: 100%; flex-wrap: wrap;">
      
-        <div class= "students" template="ngFor let user of users">
+        <div style=text-align:center class= "students" template="ngFor let user of users">
+        <div style="border: 1px solid brown;">
         <a href="#/student">
         <img src="{{user.img}}"/>
         </a>
+        <div style="text-align:center; font: roboto thin;" style="background-color: brown">
         {{ user.name }}
-        
+        </div>
+        </div>
+          <div style="border: 5px solid yellow">
+
+          </div>
         </div>
         </div>
     </div>
