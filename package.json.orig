@@ -10,11 +10,14 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+<<<<<<< HEAD
     "dev": "ng build -w"
+=======
     "clean": "ionic-app-scripts clean",
     "buildPhone": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve"
+>>>>>>> c3cb19a5e3e51b14ba4448da5b581c51fa6558b1
   },
   "private": true,
   "dependencies": {

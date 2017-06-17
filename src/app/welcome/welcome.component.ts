@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'welcome',
     template: `
-    <h1>Welcome Teacher & Parents</h1>
+    <h1 id = "welctitle">Welcome Teachers & Parents</h1>
     
     
     

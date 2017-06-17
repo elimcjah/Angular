@@ -17,7 +17,7 @@ import { ActivatedRoute } from '@angular/router';
              <div style="position:absolute; top:0; bottom:0; right:0; left:0; overflow: scroll;">
              </div>
            </div>
-    
+    <div>Hello World</div>
            <div>
            <img src= "" />
     <h1 style=text-align:center>  </h1>
@@ -34,22 +34,21 @@ import { ActivatedRoute } from '@angular/router';
                 (chartClick)="chartClicked($event)"></canvas>
                 </div>
     <div style= "display:flex; flex-direction:column; height:100%;">
-    <div style = "display: flex; width: 100%; flex-wrap: wrap;">
+    
       
         <div class= "students" template="ngFor let user of users">
         <a href="#/student">
-        <img src="{{ user.img }}"/>
-        </a>
         {{ user.name }}
-        </div>
+        </a>
+
         </div>
         </div>
   `
 })
 export class StudentComponent implements OnInit {
     
-  public users = [{ name: 'Colors', img: 'a' },
-    { name: 'Shapes', img: 'b' }, { name: 'Numbers', img: 'c' }];
+  public users = [{ name: 'Colors'},
+    { name: 'Shapes'}, { name: 'Numbers'}];
   private addStudentUrl = 'http://www.parentingnation.in/Resources/articleimages/actual/668.jpg';
   constructor(
     public route: ActivatedRoute,

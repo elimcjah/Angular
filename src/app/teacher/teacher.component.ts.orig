@@ -9,10 +9,18 @@ import { ActivatedRoute } from '@angular/router';
   
   template: `
   <style> .students{
+<<<<<<< HEAD
+    flex-grow: 1; padding:5em;
+    border-style: solid;
+    border-width: 1px;
+}
+    
+=======
    flex-grow: 1; padding:5em;}
    img{
      width:100%; height:auto;
    }
+>>>>>>> c3cb19a5e3e51b14ba4448da5b581c51fa6558b1
   </style>
          <div style="position:relative; flex-grow:1;">
          
