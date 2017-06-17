@@ -15,8 +15,11 @@ var upload = multer({ dest: 'uploads/' })
 var body = require('body-parser') 
 
 
-app.use('/static', express.static('public'))
 app.use(body.urlencoded())
+app.use(body.json())
+
+app.use('/', express.static('../dist'))
+app.use('/www/', express.static('../www'))
 // console.log(
 // knex('rory_table')
 // .select()
@@ -57,8 +60,20 @@ app.post('/last', function (req, res) {
        })
 })
 
+app.post('/user_pass', function (req, res) {
+    console.log(req.body)
+    //.insert({ })
+    
+        res.send('qwer')
+    
+})
+
 
 // appc
+
+app.get('/ping', function (req, res){
+    res.send('ping')
+})
 
 app.get('/analytics/:id', function (req, res) {
     let id = req.params.id

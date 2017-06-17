@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { HeaderComponent } from './header';
-import { WelcomeComponent} from './welcome';
+import { LoginComponent} from './login';
 import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
 import { AddStudentComponent} from'./add_student';
@@ -20,7 +20,7 @@ import { NoContentComponent } from './no-content';
   declarations: [
     AppComponent,
     HeaderComponent,
-    WelcomeComponent,
+    LoginComponent,
     TeacherComponent,
     StudentComponent,
     AddStudentComponent,

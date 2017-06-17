@@ -10,6 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "dev": "ng build -w",
     "clean": "ionic-app-scripts clean",
     "buildPhone": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
