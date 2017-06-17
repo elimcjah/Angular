@@ -9,7 +9,11 @@ import { ActivatedRoute } from '@angular/router';
   
   template: `
   <style> .students{
-   flex-grow: 1; padding:5em;}
+    flex-grow: 1; padding:5em;
+    border-style: solid;
+    border-width: 1px;
+}
+    
   </style>
          <div style="position:relative; flex-grow:1;">
          

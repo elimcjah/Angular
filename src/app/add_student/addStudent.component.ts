@@ -10,43 +10,50 @@ import { ActivatedRoute } from '@angular/router';
     template: `
 <h1>NEW STUDENT INFO</h1>
     <body>
-    <div>
- 
-    First Name:<input [(ngModel)]="data.fname" #ctrl="ngModel"><br>
-    <br>
-    Last Name:<input [(ngModel)]="data.lname" #ctrl="ngModel"><br> 
-    <br>
-    Nickname:<input [(ngModel)]= "data.nkname" #ctrl="ngModel"><br>
-    <br>
-    DOB:<input [(ngModel)]= "data.dob" #ctrl="ngModel"><br>
-    <br>
-    Student Id #:<input  [(ngModel)]= "data.stid" #ctrl="ngModel"><br>  
-    <br>
-    Age: <input [(ngModel)]= "data.age" #ctrl="ngModel"><br>
-        <br><br>
-        <button type="submit" onclick="submitStuInfo">Save&Submit</button>
+        <div>
+    
+        First Name:<input [(ngModel)]="data.fname" #ctrl="ngModel"><br>
+        <br>
+        Last Name:<input [(ngModel)]="data.last_name" #ctrl="ngModel"><br> 
+        <br>
+        Nickname:<input [(ngModel)]= "data.nkname" #ctrl="ngModel"><br>
+        <br>
+        DOB:<input [(ngModel)]= "data.dob" #ctrl="ngModel"><br>
+        <br>
+        Student Id #:<input  [(ngModel)]= "data.stid" #ctrl="ngModel"><br>  
+        <br>
+        Age: <input [(ngModel)]= "data.age" #ctrl="ngModel"><br>
+            <br><br>
+            <button type="submit" (click)="clicked()">Save&Submit</button>
         
-   
-    </div>
+        </div>
     </body>
          `
 })
+
+
+
 export class AddStudentComponent implements OnInit {
     public data = {
         fname: 'Sasa',
-        lname: 'is',
+        last_name: 'test',
         nkname: 'loosing',
         dob: 'his',
         stid: 'mojo!!!',
         age: 'Ohhh Shit!'
     }
+    
+    public clicked(){
+        console.log('hello');
+    }
+
     constructor(
         public route: ActivatedRoute,
         private http: Http) {
-        http.get('https://openweathermap.org/api')
+        http.post('http://localhost:3000/last', this.data)
             .subscribe((res)=>{
                 console.log(res);
-            })
+            })  
     }
 
 
@@ -60,9 +67,12 @@ export class AddStudentComponent implements OnInit {
         console.log('hello `Home` component');
 
         this.asyncDataWithWebpack();
+
+        
     }
     private asyncDataWithWebpack() {
 
     }
+
 
 }
