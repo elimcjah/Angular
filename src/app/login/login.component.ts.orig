@@ -8,8 +8,12 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'login',
     template: `
+<<<<<<< HEAD
+    <h1 id = "logintitle">Welcome to Hell!! Teachers & Parents</h1>
+=======
     <h1 id = "logintitle">Welcome Teachers & Parents</h1>
     <div style="width: 500px; margin: 200px auto 0 auto;">
+>>>>>>> a8d7b9ec2ec9b7150fed0d8e5eae27305962875d
     <h2> Please login below to access your class</h2>
     <body>
     <div class = "login-forms">
@@ -48,13 +52,13 @@ export class LoginComponent implements OnInit {
              .subscribe((res)=>{
                  console.log(res);
              })
-        console.log('submit pass', this.userdata.usname)
+        console.log('submit pass', this.userdata)
     }
 
 
     constructor(
         public route: ActivatedRoute,
-        public http: Http) {
+        private http: Http) {
             
         }
     
