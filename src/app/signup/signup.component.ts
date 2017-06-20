@@ -18,7 +18,7 @@ import { ActivatedRoute } from '@angular/router';
         <br>
         Username:<input [(ngModel)]= "data.username" #ctrl="ngModel"><br>
         <br>
-        Password:<input [(ngModel)]= "data.password" #ctrl="ngModel"><br>
+        Password:<input type="password" [(ngModel)]= "data.password" #ctrl="ngModel"><br>
         <br>
         Email:<input  [(ngModel)]= "data.email" #ctrl="ngModel"><br>  
         <br>
@@ -43,18 +43,18 @@ export class SignupComponent implements OnInit {
     }
     
     public clicked(){
-        console.log('hello');
+        this.http.post('http://localhost:3000/user_pass' , this.data)
+             .subscribe((res)=>{
+                 console.log(res);
+             })
+              console.log('submit pass', this.data)
     }
 
-    constructor(
+        constructor(
         public route: ActivatedRoute,
-        private http: Http) {
-        http.post('http://localhost:3000/last', this.data)
-            .subscribe((res)=>{
-                console.log(res);
-            })  
-    }
-
+        public http: Http) {
+            
+        }
 
     public ngOnInit() {
         this.route
