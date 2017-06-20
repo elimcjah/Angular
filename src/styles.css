@@ -8,3 +8,17 @@
     font-family: 'Roboto', sans-serif;
     color: #80deea; 
   }
+  #teach1 { /* image styling*/
+    display: flex; 
+    text-align: right;
+    width: 100%;
+    height: auto;
+   
+  }
+
+  #teach-name {
+  color: #6d4c41;
+  width: 100%;
+  height: auto;
+  font-family: 'Roboto', sans-serif;
+  }
