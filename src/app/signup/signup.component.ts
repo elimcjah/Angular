@@ -44,12 +44,16 @@ export class SignupComponent implements OnInit {
     
     public clicked(){
         console.log('hello');
+         this.http.post('http://localhost:3000/signup' , this.data)
+             .subscribe((res)=>{
+                 console.log(res);
+             })
     }
 
     constructor(
         public route: ActivatedRoute,
         private http: Http) {
-        http.post('http://localhost:3000/last', this.data)
+        http.post('http://localhost:3000/signup', this.data)
             .subscribe((res)=>{
                 console.log(res);
             })  

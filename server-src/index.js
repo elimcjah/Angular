@@ -59,6 +59,15 @@ app.post('/last', function (req, res) {
            res.send('qwer')
        })
 })
+////////////////////////SIGNUP PAGE////////////////////////////////////////
+app.post('/signup', function (req, res) {
+       console.log(req.body)
+       knex('users')
+       .insert({ username: req.body.username })
+       .then(function (qwer){
+           res.send('qwer')
+       })
+})
 
 app.post('/user_pass', function (req, res) {
     console.log(req.body)

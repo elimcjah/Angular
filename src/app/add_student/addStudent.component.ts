@@ -36,7 +36,7 @@ import { ActivatedRoute } from '@angular/router';
 export class AddStudentComponent implements OnInit {
     public data = {
         fname: 'Sasa',
-        last_name: 'test',
+        last_name: '',
         nkname: 'loosing',
         dob: 'his',
         stid: 'mojo!!!',
@@ -45,6 +45,10 @@ export class AddStudentComponent implements OnInit {
     
     public clicked(){
         console.log('hello');
+         this.http.post('http://localhost:3000/last' , this.data)
+             .subscribe((res)=>{
+                 console.log(res);
+             })
     }
 
     constructor(
