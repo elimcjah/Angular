@@ -9,12 +9,22 @@ import { ActivatedRoute } from '@angular/router';
     selector: 'login',
     template: `
     <h1 id = "logintitle">Welcome Teachers & Parents</h1>
+    <div style="width: 500px; margin: 200px auto 0 auto;">
     <h2> Please login below to access your class</h2>
     <body>
     <div class = "login-forms">
-        <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Your Login"><br>
+    <label><b>Username</b></label>
     <br>
-    <input password [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Your Password"> <br> 
+        <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Enter Username"><br>
+    <br>
+    <label><b>Password</b></label>
+    <br>
+    <input type="password" [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Enter Password"> <br> 
+    <br>
+    <a href="#/signup">Signup</a>
+    <br>
+    <br>
+    <input type="checkbox" checked="checked"> Remember me
     <br>
     <br>
     <button (click)="clicked()">Submit</button>
