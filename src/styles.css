@@ -11,8 +11,9 @@
   #teach1 { /* image styling*/
     display: flex; 
     text-align: right;
-    width: 100%;
-    height: auto;
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
    
   }
 

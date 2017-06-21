@@ -1,30 +1,42 @@
-import { Component } from '@angular/core'; @Component({ selector: 'app-root', templateUrl: './app.component.html', styleUrls:
-['./app.component.css'], template: `
+import { Component } from '@angular/core';
 
-<main style="display: flex-direction:column; height:100%;">
-  <!-- core/navbar.component.html -->
-  <div class="filler"></div>
-  <div class="navbar">
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
 
-    <div class="navbar-header">
+  template: `
+    
+    <main style="display: flex-direction:column; height:100%;">
+    <!-- core/navbar.component.html -->
+    <div class="filler"></div>
+<div class="navbar">
 
-      <div><img id="logo" src="./assets/images/logo.png"></div>
-      <a class="navbar-brand" href="#/login"><button id="welcome">Welcome</button></a>
-      <a class="navbar-brand" href="#/home"><button id="student">Students</button></a>
-      <a class="navbar-brand"><button id="games">Games</button></a>
-      <a class="navbar-brand" href="#/add"><button id="add">+ Student</button></a>
-      <a class="navbar-brand"><button id="login">Login</button></a>
+     <div class="navbar-header">
+        
+            <div><img id= "logo" src = "./assets/images/logo.png"></div>
+            <a class="navbar-brand" href = "#/login"><button id="welcome">Welcome</button></a>
+            <a class="navbar-brand" href = "#/home"><button id="student">Students</button></a>
+            <a class="navbar-brand"><button id="games">Games</button></a>
+            <a class="navbar-brand" href = "#/add"><button id="add">+ Student</button></a>
+            
 
-      <div><img id="teach1" src="./assets/images/teacher1.jpeg"></div>
-      <h4 id="teach-name">Ms. Niki</h4>
+            <a class="navbar-brand"><img id="teach1" src = "./assets/images/teacher1.jpeg"></a><h4 id= "teach-name">Ms. Niki</h4>
+            
+        </div>
+        <div class="brnav">
+          <h2 id = "stunav">Student</h2>
+        </div>
+    
+</div>
+      <router-outlet></router-outlet>
+    </main>
+  `
+})
+export class AppComponent {
+  fullImagePath: string;
 
-    </div>
-    <div class="brnav">
-      <h2 id="stunav">Student</h2>
-    </div>
-
-  </div>
-  <router-outlet></router-outlet>
-</main>
-` }) export class AppComponent { fullImagePath: string; constructor() { this.fullImagePath = 'assets/images/workday.jpg';
-} }
+  constructor() {
+    this.fullImagePath = 'assets/images/workday.jpg';
+  }
+}
