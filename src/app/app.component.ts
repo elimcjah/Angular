@@ -15,13 +15,12 @@ import { Component } from '@angular/core';
      <div class="navbar-header">
         
             <div><img id= "logo" src = "./assets/images/logo.png"></div>
-            <a class="navbar-brand" href = "#/login"><button id="welcome">Welcome</button></a>
-            <a class="navbar-brand" href = "#/home"><button id="student">Students</button></a>
-            <a class="navbar-brand"><button id="games">Games</button></a>
-            <a class="navbar-brand" href = "#/add"><button id="add">+ Student</button></a>
-            
-
-            <a class="navbar-brand"><img id="teach1" src = "./assets/images/teacher1.jpeg"></a><h4 id= "teach-name">Ms. Niki</h4>
+            <a class="navbar-brand" href = "#/login"><button class="b-style">Login</button></a>
+            <a class="navbar-brand" href = "#/home"><button class="b-style">Students</button></a>
+            <a class="navbar-brand"><button class="b-style">Games</button></a>
+            <a class="navbar-brand" href = "#/add"><button class="b-style">+Student</button></a>
+            <a class="navbar-image"><img id="teach1" src = "./assets/images/teacher1.jpeg"></a>
+            <h4 id= "teach-name">Ms. Niki</h4>
             
         </div>
         <div class="brnav">

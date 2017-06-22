@@ -28,6 +28,9 @@
   
 
 }
+.navbar-image {
+  width: 100px;
+}
 
 .navbar {
   background:#80deea;
@@ -57,32 +60,8 @@
   
 }
 
-  #add {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
-  }
-  #games {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
-  }
-  #student {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
   
-  }
-  #home {
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
-  }
-  #welcome {
+  .b-style {
     font-family: 'Roboto', sans-serif;
     color: white;
     outline: none;

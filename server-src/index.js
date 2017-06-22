@@ -13,7 +13,7 @@ var knex = require('knex')({
 var multer = require('multer')
 var upload = multer({ dest: 'uploads/' })
 var body = require('body-parser') 
-
+console.log(knex);
 
 app.use(body.urlencoded())
 app.use(body.json())
@@ -79,6 +79,18 @@ app.post('/user_pass', function (req, res) {
 
 
 // appc
+// app.get('/users', function(req, res) {
+//    let users=  {
+//         fname: 'Sasa',
+//         last_name: '',
+//         nkname: 'loosing',
+//         dob: 'his',
+//         stid: 'mojo!!!',
+//         age: 'Ohhh Shit!'
+//     }
+    
+//     res.send(users)
+// })
 
 app.get('/ping', function (req, res){
     res.send('ping')
