@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
             <a class="navbar-brand" href = "#/add"><button id="add">+ Student</button></a>
             
 
-            <a class="navbar-brand"><img id="teach1" src = "./assets/images/teacher1.jpeg"></a><h4 id= "teach-name">Ms. Niki</h4>
+            <a class="navbar-brand"><img id="teach1" src = "./assets/images/teacher1.jpeg" style="border-radius: 30px;"></a><h4 id= "teach-name">Ms. Niki</h4>
             
         </div>
         <div class="brnav">

@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
     selector: 'login',
     template: `
     <h1 id = "logintitle">Welcome Teachers & Parents</h1>
-    <div style="width: 500px; margin: 200px auto 0 auto;">
+    <div style="width: 500px; margin: 200px auto 0 auto; border-radius: 25px; border: 2px solid #6d4c41;">
     <h2> Please login below to access your class</h2>
     <body>
     <div class = "login-forms">
