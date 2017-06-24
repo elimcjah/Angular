@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 
   template: `
@@ -16,6 +18,7 @@ import { Component } from '@angular/core';
         
             <div><img id= "logo" src = "./assets/images/logo.png"></div>
             <a class="navbar-brand" href = "#/login"><button class="b-style">Login</button></a>
+            <a class="navbar-brand" href = "#/login"><button (click)="logout()" class="b-style">FrannyOut</button></a>
             <a class="navbar-brand" href = "#/home"><button class="b-style">Students</button></a>
             <a class="navbar-brand"><button class="b-style">Games</button></a>
             <a class="navbar-brand" href = "#/add"><button class="b-style">+Student</button></a>
@@ -38,10 +41,41 @@ import { Component } from '@angular/core';
     </main>
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   fullImagePath: string;
-
-  constructor() {
-    this.fullImagePath = 'assets/images/workday.jpg';
+  public data = {
+    keyword: 'public data line 46',
+    moreData: 'dataatttata'
   }
+  
+
+  public logout(){
+    console.log('hello');
+    this.http.post('http://localhost:3000/logout' , this.data)
+        .subscribe((res)=>{
+            console.log('what');
+        })
+         window.location.hash='#/login';
+         console.log('booyahhh');
+    }
+
+  constructor( 
+     public route: ActivatedRoute,
+        private http: Http) {
+        http.post('http://localhost:3000/logout', 'yayayayya')
+            .subscribe((res)=>{
+                console.log(res);
+            })  
+
+  }
+  
+   public ngOnInit() {
+        this.route
+            .data
+            .subscribe((data: any) => {
+                //this.localState = data.yourData;
+            });
+   }
 }
+
+

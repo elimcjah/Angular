@@ -59,6 +59,17 @@ app.post('/last', function (req, res) {
            res.send('qwer')
        })
 })
+////////////////////////Log Out///////////////////////////////////////////
+app.post('/logout', function (req, res) {
+    console.log('frannyout')
+     knex('analytics')
+     .insert({ type: req.body.keyword })
+     .then(function (lalala){
+         res.send('lalala')
+    })
+})
+
+
 ////////////////////////SIGNUP PAGE////////////////////////////////////////
 app.post('/signup', function (req, res) {
        console.log(req.body)

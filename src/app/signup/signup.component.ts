@@ -43,6 +43,7 @@ export class SignupComponent implements OnInit {
     }
 
     public sub(){
+        window.location.hash='#/home';
         console.log('eehhhhh');
     }
     
