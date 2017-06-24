@@ -80,6 +80,18 @@ app.post('/user_pass', function (req, res) {
 
 
 // appc
+// app.get('/users', function(req, res) {
+//    let users=  {
+//         fname: 'Sasa',
+//         last_name: '',
+//         nkname: 'loosing',
+//         dob: 'his',
+//         stid: 'mojo!!!',
+//         age: 'Ohhh Shit!'
+//     }
+    
+//     res.send(users)
+// })
 
 app.get('/ping', function (req, res){
     res.send('ping')

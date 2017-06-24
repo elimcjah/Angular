@@ -14,13 +14,33 @@
     width: 60px;
     height: 60px;
     margin-top: 10px;
+    border-radius: 50%;
    
   }
 
-  #teach-name {
+  .teach-name {
   color: #6d4c41;
-  width: 100%;
+  width:100%;
   height: auto;
   font-family: 'Roboto', sans-serif;
+  padding-left: 10px;
+  margin-top: 30px
+
+  }
+
+  .drop-down {
+    display: none;
+    position: absolute; 
+    right: 50px;
+    }
+
+  li {list-style-type: none;}
+
+  .drop-btn {
+    background-color: transparent;
+    border: none;
+  }
   
+  .hot-drop:hover .drop-down{
+    display: block;
   }
