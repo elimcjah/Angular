@@ -57,6 +57,7 @@
   height: auto;
   font-family: 'Roboto', sans-serif;
   text-indent: 30px;
+  display: flex;
   
 }
 

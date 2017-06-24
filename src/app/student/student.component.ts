@@ -17,26 +17,41 @@ import { ActivatedRoute } from '@angular/router';
              <div style="position:absolute; top:0; bottom:0; right:0; left:0; overflow: scroll;">
              </div>
            </div>
-    <div>Hello World</div>
-           <div>
-           <img src=""/>
+           <div style="width: 160px; height: 150px; background-size: cover;" [ngStyle]="{'background-image': 'url(' + user.img + ')'}">
            </div>
     <div style= "display:flex; flex-direction:column; height:100%;">
     
-      
-        <div class= "students" template="ngFor let user of users">
-        <a href="#/student">
-        {{ user.name }}
-        </a>
-
-        </div>
-        </div>
+        <div>
+           <a href="#/overview">Overview</a>
+           <br>
+           <br>
+           <a href="#/colors">Colors</a>
+           <br>
+           <br>
+           <a href="#/shapes">Shapes</a>
+           <br>
+           <br>
+           <a href="#/numbers">Numbers</a>
+           <br>
+           <br>
+           <a href="#/sorting">Sorting</a>
+           <br>
+           <br>
+           <a href="#/attention">Attention</a>
+           <br>
+           <br>
+           <a href="#/communication">Communication</a>
+           <br>
+      </div>
+      </div>
+        
   `
 })
 export class StudentComponent implements OnInit {
     
-  public users = [{ name: 'Colors'},
-    { name: 'Shapes'}, { name: 'Numbers'}];
+  public users = [{ name: 'Overview'}, { name: 'Colors'},
+    { name: 'Shapes'}, { name: 'Numbers'}, { name: 'Sorting' }, { name: 'Attention' },
+    { name: 'Communication'}];
   private addStudentUrl = 'http://www.parentingnation.in/Resources/articleimages/actual/668.jpg';
   constructor(
     public route: ActivatedRoute,

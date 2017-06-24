@@ -18,7 +18,7 @@
    
   }
 
-  #teach-name {
+  .teach-name {
   color: #6d4c41;
   width:100%;
   height: auto;
@@ -28,4 +28,19 @@
 
   }
 
+  .drop-down {
+    display: none;
+    position: absolute; 
+    right: 50px;
+    }
+
+  li {list-style-type: none;}
+
+  .drop-btn {
+    background-color: transparent;
+    border: none;
+  }
   
+  .hot-drop:hover .drop-down{
+    display: block;
+  }
