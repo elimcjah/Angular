@@ -63,7 +63,8 @@ app.post('/last', function (req, res) {
 app.post('/signup', function (req, res) {
        console.log(req.body)
        knex('users')
-       .insert({ username: req.body.username })
+       .insert({ username: req.body.username, password: req.body.password, 
+           first_name: req.body.first_name, last_name: req.body.last_name, email: req.body.email })
        .then(function (qwer){
            res.send('qwer')
        })

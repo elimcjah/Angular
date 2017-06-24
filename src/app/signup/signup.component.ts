@@ -24,7 +24,8 @@ import { ActivatedRoute } from '@angular/router';
         <br>
             <br><br>
             <button type="submit" (click)="clicked()">Save & Submit</button>
-        
+            <a href="#/student">
+            </a>
         </div>
     </body>
          
