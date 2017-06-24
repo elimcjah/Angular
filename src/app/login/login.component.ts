@@ -27,7 +27,7 @@ import { ActivatedRoute } from '@angular/router';
     <input type="checkbox" checked="checked"> Remember me
     <br>
     <br>
-    <button (click)="clicked()">Submit</button>
+    <button (click)="sub()">Submit</button>
     
     
     </div>
@@ -41,6 +41,11 @@ export class LoginComponent implements OnInit {
         usname: '',
         pass: ''
 
+    }
+
+    public sub(){
+        window.location.hash='#/home';
+        console.log('ehhhh');
     }
     public clicked(){
         //http post request to the server

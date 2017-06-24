@@ -23,9 +23,8 @@ import { ActivatedRoute } from '@angular/router';
         Email:<input  [(ngModel)]= "data.email" #ctrl="ngModel"><br>  
         <br>
             <br><br>
-            <button type="submit" (click)="clicked()">Save & Submit</button>
-            <a href="#/student">
-            </a>
+            <button (click)="sub()">Save & Submit</button>
+            
         </div>
     </body>
          
@@ -41,6 +40,10 @@ export class SignupComponent implements OnInit {
         username: '',
         password: '',
         email: ''
+    }
+
+    public sub(){
+        console.log('eehhhhh');
     }
     
     public clicked(){
