@@ -66,7 +66,7 @@ menuActive = true;
     }
 
   constructor( 
-    this.fullImagePath = 'assets/images/workday.jpg';
+    
      public route: ActivatedRoute,
         private http: Http) {
         http.post('http://localhost:3000/logout', 'yayayayya')
