@@ -8,58 +8,57 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'add',
     template: `
-<h1>NEW STUDENT INFO</h1>
+<h1>New Account</h1>
     <body>
         <div>
     
-        First Name:<input [(ngModel)]="data.fname" #ctrl="ngModel"><br>
+        First Name:<input [(ngModel)]="data.first_name" #ctrl="ngModel"><br>
         <br>
         Last Name:<input [(ngModel)]="data.last_name" #ctrl="ngModel"><br> 
         <br>
-        Nickname:<input [(ngModel)]= "data.nkname" #ctrl="ngModel"><br>
+        Username:<input [(ngModel)]= "data.username" #ctrl="ngModel"><br>
         <br>
-        DOB:<input [(ngModel)]= "data.dob" #ctrl="ngModel"><br>
+        Password:<input type="password" [(ngModel)]= "data.password" #ctrl="ngModel"><br>
         <br>
-        Student Id #:<input  [(ngModel)]= "data.stid" #ctrl="ngModel"><br>  
+        Email:<input  [(ngModel)]= "data.email" #ctrl="ngModel"><br>  
         <br>
-        Age: <input [(ngModel)]= "data.age" #ctrl="ngModel"><br>
             <br><br>
-            <button type="submit" (click)="clicked()">Save&Submit</button>
-        
+            <button (click)="sub()">Save & Submit</button>
+            
         </div>
     </body>
+         
          `
 })
 
 
 
-export class AddStudentComponent implements OnInit {
+export class SignupComponent implements OnInit {
     public data = {
-<<<<<<< HEAD
-        fname: '',
-        lname: '',
-        nkname: '',
-        dob: '',
-        stid: '',
-        age: ''
-=======
-        fname: 'Sasa',
-        last_name: 'test',
-        nkname: 'loosing',
-        dob: 'his',
-        stid: 'mojo!!!',
-        age: 'Ohhh Shit!'
->>>>>>> 02a989c21759c987e10f26ec5f9e48ed4a6add21
+        first_name: '',
+        last_name: '',
+        username: '',
+        password: '',
+        email: ''
+    }
+
+    public sub(){
+        window.location.hash='#/home';
+        console.log('eehhhhh');
     }
     
     public clicked(){
         console.log('hello');
+         this.http.post('http://localhost:3000/signup' , this.data)
+             .subscribe((res)=>{
+                 console.log(res);
+             })
     }
 
     constructor(
         public route: ActivatedRoute,
         private http: Http) {
-        http.post('http://localhost:3000/last', this.data)
+        http.post('http://localhost:3000/signup', this.data)
             .subscribe((res)=>{
                 console.log(res);
             })  

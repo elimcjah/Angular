@@ -9,6 +9,26 @@ import { ActivatedRoute } from '@angular/router';
     selector: 'login',
     // style: ,
     template: `
+    <h1 id = "logintitle">Welcome Teachers & Parents</h1>
+    <div style="width: 500px; margin: 200px auto 0 auto; border-radius: 25px; border: 2px solid #6d4c41;">
+    <h2> Please login below to access your class</h2>
+    <body>
+    <div class = "login-forms">
+    <label><b>Username</b></label>
+    <br>
+        <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Enter Username"><br>
+    <br>
+    <label><b>Password</b></label>
+    <br>
+    <input type="password" [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Enter Password"> <br> 
+    <br>
+    <a href="#/signup">Signup</a>
+    <br>
+    <br>
+    <input type="checkbox" checked="checked"> Remember me
+    <br>
+    <br>
+    <button (click)="sub()">Submit</button>
     
     <style> 
     @media screen and (max-width: 460px) {
@@ -45,11 +65,17 @@ export class LoginComponent implements OnInit {
         pass: ''
 
     }
-    public clicked() {
-        this.http.post('http://localhost:3000/user_pass', this.userdata)
-            .subscribe((res) => {
-                console.log(res);
-            })
+
+    public sub(){
+        window.location.hash='#/home';
+        console.log('ehhhh');
+    }
+    public clicked(){
+        //http post request to the server
+        this.http.post('http://localhost:3000/user_pass' , this.userdata)
+             .subscribe((res)=>{
+                 console.log(res);
+             })
         console.log('submit pass', this.userdata.usname)
     }
 

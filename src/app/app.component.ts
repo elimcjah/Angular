@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 
   template: `
@@ -40,17 +42,45 @@ import { Component } from '@angular/core';
  
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   fullImagePath: string;
-  menuActive = true;
+  public data = {
+    keyword: 'public data line 46',
+    moreData: 'dataatttata'
+  }
+menuActive = true;
   showMenu(){
     this.menuActive = !this.menuActive;
     console.log(this.menuActive);
   }
- 
+  
 
-  constructor() {
+  public logout(){
+    console.log('hello');
+    this.http.post('http://localhost:3000/logout' , this.data)
+        .subscribe((res)=>{
+            console.log('what');
+        })
+         window.location.hash='#/login';
+         console.log('booyahhh');
+    }
+
+  constructor( 
     this.fullImagePath = 'assets/images/workday.jpg';
-  }
-}
+     public route: ActivatedRoute,
+        private http: Http) {
+        http.post('http://localhost:3000/logout', 'yayayayya')
+            .subscribe((res)=>{
+                console.log(res);
+            })  
 
+  }
+  
+   public ngOnInit() {
+        this.route
+            .data
+            .subscribe((data: any) => {
+                //this.localState = data.yourData;
+            });
+   }
+}

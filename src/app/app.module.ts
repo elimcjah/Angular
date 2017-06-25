@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { HeaderComponent } from './header';
-import { LoginComponent} from './login';
+import { LoginComponent } from './login';
+import { SignupComponent } from './signup';
 import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
 import { AddStudentComponent} from'./add_student';
@@ -19,8 +19,8 @@ import { NoContentComponent } from './no-content';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
     LoginComponent,
+    SignupComponent,
     TeacherComponent,
     StudentComponent,
     AddStudentComponent,

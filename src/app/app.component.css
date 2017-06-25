@@ -24,7 +24,7 @@
 
 
 .navbar-brand {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: white;
   width: 100%;
   flex-grow: 1;
@@ -35,6 +35,9 @@
   border-radius: 4px;
   
 
+}
+.navbar-image {
+  width: 100px;
 }
 
 .navbar {
@@ -60,47 +63,13 @@
   height: auto;
   font-family: 'Roboto', sans-serif;
   text-indent: 30px;
-  
-  
+  display: flex;
   
 }
 
-  #login {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: red;
-    font-style: bold;
-    outline: none;
-    background-color: #3e474f;
-    font-family: sans-serif;
-    
-  }
-  #add {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
-  }
-  #games {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
-  }
-  #student {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
   
-  }
-  #home {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-    outline: none;
-    background-color: #3e474f;
-  }
-  #welcome {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  .b-style {
+    font-family: 'Roboto', sans-serif;
     color: white;
     outline: none;
     background-color: #3e474f;
