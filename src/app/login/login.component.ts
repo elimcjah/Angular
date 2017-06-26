@@ -15,11 +15,11 @@ import { ActivatedRoute } from '@angular/router';
     <div class = "login-forms">
     <label><b>Username</b></label>
     <br>
-        <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Enter Username"><br>
+        <input [(ngModel)]="data.username" placeholder="Enter Username"><br>
     <br>
     <label><b>Password</b></label>
     <br>
-    <input type="password" [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Enter Password"> <br> 
+    <input type="password" [(ngModel)]="data.password" placeholder="Enter Password"> <br> 
     <br>
     <a href="#/signup">Signup</a>
     <br>
@@ -27,7 +27,7 @@ import { ActivatedRoute } from '@angular/router';
     <input type="checkbox" checked="checked"> Remember me
     <br>
     <br>
-    <button (click)="clicked()">Submit</button>
+    <button (click)="login()">Submit</button>
     
     
     </div>
@@ -37,27 +37,28 @@ import { ActivatedRoute } from '@angular/router';
     `
 })
 export class LoginComponent implements OnInit {
-    public userdata = {
-        usname: '',
-        pass: ''
+    public data = {
+        username: '',
+        password: ''
 
     }
-    public clicked(){
+    public login(){
         //http post request to the server
-        this.http.post('http://localhost:3000/user_pass' , this.userdata)
+        this.http.post('http://localhost:3000/login' , this.data)
              .subscribe((res)=>{
                  console.log(res);
              })
-        console.log('submit pass', this.userdata.usname)
+        console.log(this.data.username);
     }
 
 
     constructor(
         public route: ActivatedRoute,
         public http: Http) {
-            
-        }
-    
+        http.post('http://localhost:3000/login' , this.data)
+            .subscribe((res)=>{    
+            })
+    }
     
     public ngOnInit() {
         this.route

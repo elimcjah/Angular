@@ -7,14 +7,13 @@ import { Component } from '@angular/core';
 
   template: `
     
-    <main style="display: flex-direction:column; height:100%;">
-    <!-- core/navbar.component.html -->
+    
     <div class="filler"></div>
 <div class="navbar">
 
      <div class="navbar-header">
         
-            <div><img id= "logo" src = "./assets/images/logo.png"></div>
+            <div><img class= "logo" src = "./assets/images/logo.png"></div>
             <a class="navbar-brand" href = "#/login"><button class="b-style">Login</button></a>
             <a class="navbar-brand" href = "#/home"><button class="b-style">Students</button></a>
             <a class="navbar-brand"><button class="b-style">Games</button></a>
@@ -35,7 +34,7 @@ import { Component } from '@angular/core';
     
 </div>
       <router-outlet></router-outlet>
-    </main>
+    
   `
 })
 export class AppComponent {

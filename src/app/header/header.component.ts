@@ -9,8 +9,8 @@ import { ActivatedRoute } from '@angular/router';
     styles: [`
    `],
     template: `
-  <main style="display: flex-direction:column; height:100%;">
-    <!-- core/navbar.component.html -->
+  <!--<main style="display: flex-direction:column; height:100%;">
+    
     <div class="filler"></div>
 <div class="navbar">
     <div class="brnav"></div>
@@ -26,7 +26,7 @@ import { ActivatedRoute } from '@angular/router';
     
 </div>
       <router-outlet></router-outlet>
-    </main>
+    </main>-->
 `
 })
 export class HeaderComponent implements OnInit {
