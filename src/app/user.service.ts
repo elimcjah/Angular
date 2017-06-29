@@ -1,7 +1,7 @@
 export default { 
 
-    firstName: '',
-    lastName: '',
+    firstname: '',
+    lastname: '',
 
     //  counter : 0,
      

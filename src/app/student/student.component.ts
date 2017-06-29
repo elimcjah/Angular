@@ -59,9 +59,9 @@ export class StudentComponent implements OnInit {
     private http: Http
     
   ) {
-    data.firstname = 'rory';
+    service.firstname = 'rory';
     console.log('====================')
-    console.log(data);
+    console.log(service);
     // this.http.get(this.addStudentUrl).subscribe((response)=>{
     //     console.log(response);
     //   })

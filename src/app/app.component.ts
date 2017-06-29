@@ -9,38 +9,37 @@ import { ActivatedRoute } from '@angular/router';
 
   template: `
  
-
-  <div class="navbar">
-    <div class="navbar-header">
-
-      <div><img class="logo" src="./assets/images/logo.png"></div>
-      <!--<a class="navbar-brand" href="#/login"><button id="welcome">Welcome</button></a>
-          <a class="navbar-brand" href="#/home"><button id="student">Students</button></a>
-          <a class="navbar-brand"><button id="games">Games</button></a>
-          <a class="navbar-brand" href="#/add"><button id="add">+ Student</button></a>
-          <a class="navbar-brand"><button id="login">Login</button></a>-->
-    </div>
-    <div class="brnav">
-      <h2 id="stunav">Student</h2>
-    </div>
-
-
-  </div>
+<div class="navbar">
   <div class="sideMenu">
-  <div class="hamburger" (click)="showMenu()">
-    <img src="./assets/images/burger.png">
-    <div class="mobile-nav" [class.mobile]="menuActive">
-      <ul>
-        <li><a href="#/login">Welcome </a></li>
-        <li><a href="#/home">Students</a></li>
-        <li>Games</li>
-        <li><a href="#/add">+ Student </a></li>
-        <li>Login</li>
-      </ul>
+    <div class="hamburger" (click)="showMenu()">
+    <div [class.hide]="imgActive">
+      <img src="./assets/images/burger.png">
+      </div>
+      <div class="mobile-nav" [class.mobile]="menuActive">
+        <ul>
+          <li><a href="#/login">Welcome </a></li>
+          <li><a href="#/home">Students</a></li>
+          <li>Games</li>
+          <li><a href="#/add">+ Student </a></li>
+          <li>Login</li>
+          <li (click)="showImg()">EXIT Menu</li>
+        </ul>
+      </div>
     </div>
   </div>
+  <div class="navbar-header">
+
+    <div><img class="logo" src="./assets/images/logo.png"></div>
+   
   </div>
-  <router-outlet></router-outlet>
+  <div class="brnav">
+    <h2 id="stunav">Student</h2>
+  </div>
+
+
+</div>
+
+<router-outlet></router-outlet>
  
   `
 })
@@ -50,11 +49,17 @@ export class AppComponent implements OnInit {
     keyword: 'public data line 46',
     moreData: 'dataatttata'
   }
+  imgActive = true;
+  showImg(){
+    this.imgActive = !this.imgActive;
+  }
 menuActive = true;
   showMenu(){
     this.menuActive = !this.menuActive;
+    this.showImg()
     console.log(this.menuActive);
   }
+  
   
 
   public logout(){
