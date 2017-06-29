@@ -108,6 +108,9 @@
     right: 5%;
     
   }
+  /*.hide{
+    display:none;
+  }*/
   .logo {  
     width: 200px;
     height: auto;
