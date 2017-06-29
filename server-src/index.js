@@ -26,8 +26,8 @@ app.use(body.json())
 app.use(expressValidator());
 app.use(expressSession({ secret: 'sasaGoat', saveUnitialized: false, resave: false }));
 
-app.use('/', express.static('../dist'))
-app.use('/www/', express.static('../www'))
+app.use('/', express.static('dist'))
+app.use('/www/', express.static('www'))
 // console.log(
 // knex('rory_table')
 // .select()
@@ -35,10 +35,10 @@ app.use('/www/', express.static('../www'))
 // 
 
 ////////SESSIONS////////
-app.get('/', function (req, res, next) {
-    res.render('index', { title: 'Form Validation', success: true, errors: req.session.errors });
-    res.session.errors = null;
-})
+// app.get('/', function (req, res, next) {
+//     res.render('/', { title: 'Form Validation', success: true, errors: req.session.errors });
+//     res.session.errors = null;
+// })
 
 ////////////// LOGIN PAGE///////////////////
 app.post('/login', function (req, res) {
