@@ -12,9 +12,9 @@ import { ActivatedRoute } from '@angular/router';
 <div class="navbar">
   <div class="sideMenu">
     <div class="hamburger" (click)="showMenu()">
-    <div [class.hide]="imgActive">
+    <!--<div [class.hide]="imgActive">-->
       <img src="./assets/images/burger.png">
-      </div>
+      <!--</div>-->
       <div class="mobile-nav" [class.mobile]="menuActive">
         <ul>
           <li><a href="#/login">Welcome </a></li>
@@ -22,7 +22,7 @@ import { ActivatedRoute } from '@angular/router';
           <li>Games</li>
           <li><a href="#/add">+ Student </a></li>
           <li>Login</li>
-          <li (click)="showImg()">EXIT Menu</li>
+          <!--<li (click)="showImg()">EXIT Menu</li>-->
         </ul>
       </div>
     </div>
@@ -49,15 +49,18 @@ export class AppComponent implements OnInit {
     keyword: 'public data line 46',
     moreData: 'dataatttata'
   }
-  imgActive = true;
-  showImg(){
-    this.imgActive = !this.imgActive;
-  }
+  // imgActive = false;
+  // showImg(){
+  //   this.imgActive = !this.imgActive;
+  //   console.log("HEYYYY DAVIS");
+  // }
 menuActive = true;
+counter = 0;
   showMenu(){
     this.menuActive = !this.menuActive;
-    this.showImg()
     console.log(this.menuActive);
+    this.counter++;
+    console.log(this.counter + "  i am at this count");
   }
   
   
