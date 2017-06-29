@@ -35,12 +35,12 @@ import { ActivatedRoute } from '@angular/router';
 
 export class AddStudentComponent implements OnInit {
     public data = {
-        fname: 'Sasa',
-        last_name: '',
-        nkname: 'loosing',
-        dob: 'his',
-        stid: 'mojo!!!',
-        age: 'Ohhh Shit!'
+        fname: 'mike',
+        last_name: 'jones',
+        nkname: 'franny',
+        dob: '5/4/34',
+        stid: 1,
+        age: '78'
     }
     
     public clicked(){

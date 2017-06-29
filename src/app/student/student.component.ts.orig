@@ -4,7 +4,11 @@
  } from '@angular/core';
  import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
+<<<<<<< HEAD
+import data from '../student.services'
+=======
 import service from '../user.service';
+>>>>>>> b89b9533bf24d4109934efad8076efb81fd24f31
 
 
 @Component({
@@ -59,15 +63,21 @@ export class StudentComponent implements OnInit {
     private http: Http
     
   ) {
+<<<<<<< HEAD
     data.firstname = 'rory';
     console.log('====================')
     console.log(data);
+    this.http.get(this.addStudentUrl).subscribe((response)=>{
+        console.log(response);
+      })
+=======
     // this.http.get(this.addStudentUrl).subscribe((response)=>{
     //     console.log(response);
     //   })
       console.log('=====================');
       console.log(service);
       //service.increment();
+>>>>>>> b89b9533bf24d4109934efad8076efb81fd24f31
     }
     getAddStudentComponent(){
       
