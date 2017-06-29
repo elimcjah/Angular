@@ -16,7 +16,7 @@ import { ActivatedRoute } from '@angular/router';
     <div class = "login-forms">
     <label><b>Username</b></label>
     <br>
-    <input type="text"[(ngModel)]="data.username" placeholder="Enter Username"><br>
+        <input [(ngModel)]="data.username" placeholder="Enter Username"><br>
     <br>
     <label><b>Password</b></label>
     <br>
@@ -28,7 +28,11 @@ import { ActivatedRoute } from '@angular/router';
     <input type="checkbox" checked="checked"> Remember me
     <br>
     <br>
+<<<<<<< HEAD
     <button (click)="login()">Submit</button>
+=======
+    <button (click)="sub()">Submit</button>
+>>>>>>> 3a0d7f215a9705300841b6dd42d03f86c669ea81
     
     <style> 
     @media screen and (max-width: 460px) {
@@ -46,9 +50,9 @@ import { ActivatedRoute } from '@angular/router';
         <div>
             <div class="col-2"> </div>
             <div class="login-forms col-4">
-                <input [(ngModel)]="data.username" #ctrl="ngModel" placeholder="Your Login"><br>
+                <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Your Login"><br>
                 <br>
-                <input password [(ngModel)]="data.password" #ctrl="ngModel" placeholder="Your Password"> <br>
+                <input password [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Your Password"> <br>
                 <br>
                 <br>
                 <button (click)="clicked()">Submit</button>
@@ -65,12 +69,16 @@ export class LoginComponent implements OnInit {
         password: ''
 
     }
+<<<<<<< HEAD
+    public login(){
+=======
 
     public sub(){
         window.location.hash='#/home';
         console.log('ehhhh');
     }
-    public login(){
+    public clicked(){
+>>>>>>> 3a0d7f215a9705300841b6dd42d03f86c669ea81
         //http post request to the server
         this.http.post('http://localhost:3000/login' , this.data)
              .subscribe((res)=>{
@@ -83,11 +91,18 @@ export class LoginComponent implements OnInit {
     constructor(
         public route: ActivatedRoute,
         public http: Http) {
+<<<<<<< HEAD
         http.post('http://localhost:3000/login' , this.data)
             .subscribe((res)=>{    
             })
     }
     
+=======
+
+    }
+
+
+>>>>>>> 3a0d7f215a9705300841b6dd42d03f86c669ea81
     public ngOnInit() {
         this.route
             .data

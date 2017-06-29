@@ -8,6 +8,14 @@
   height: 120px;
   
 }
+<<<<<<< HEAD
+.logo {  
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+=======
 
 
 
@@ -21,6 +29,7 @@
     
 }
 
+>>>>>>> 3a0d7f215a9705300841b6dd42d03f86c669ea81
 
 
 .navbar-brand {

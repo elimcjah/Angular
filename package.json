@@ -49,6 +49,7 @@
     "express-messages": "^1.0.1",
     "express-session": "^1.15.3",
     "express-validator": "^3.2.0",
+    "font-awesome": "^4.7.0",
     "ionic": "^3.4.0",
     "ionic-angular": "3.3.0",
     "ionic-plugin-keyboard": "^2.2.1",
