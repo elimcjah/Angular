@@ -3,6 +3,7 @@
    OnInit
  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import data from '../student.services'
 
 @Component({
   selector: '',
@@ -20,7 +21,9 @@ export class TeacherComponent implements OnInit {
     { name: 'Suzy Smiles', img: 'http://www.parentingnation.in/Resources/articleimages/actual/668.jpg' }];
   constructor(
     public route: ActivatedRoute
-  ) { }
+  ) {
+    data.lastname = 'Davis';
+   }
 
   public ngOnInit() {
     this.route

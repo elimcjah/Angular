@@ -88,10 +88,20 @@
   }
   .mobile{
     right: -1000%;
+    display:none;
+    
   }
+  /*.sideMenu{
+    height:200 px;
+    width: 150 px;
+    overflow: hidden;
+    position: absolute;
+    right: 5%;
+  }*/
   .hamburger{
     position: absolute;
-    right: 10%;
+    right: 5%;
+    
   }
   .logo {  
     width: 200px;

@@ -26,8 +26,8 @@ app.use(body.json())
 app.use(expressValidator());
 app.use(expressSession({ secret: 'sasaGoat', saveUnitialized: false, resave: false }));
 
-app.use('/', express.static('dist'))
-app.use('/www/', express.static('www'))
+app.use('/', express.static('../dist'))
+app.use('/www/', express.static('../www'))
 // console.log(
 // knex('rory_table')
 // .select()
