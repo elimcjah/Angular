@@ -3,7 +3,12 @@ const app = express()
 let logger = require('morgan');
 let util = require('util');
 let cookieParser = require('cookie-parser');
-// let bodyParser = require('body-parser');
+let bodyParser = require('body-parser');
+var expressValidator = require('express-validator');
+let expressSession = require('express-session');
+var multer = require('multer')
+var upload = multer({ dest: 'uploads/' })
+var body = require('body-parser')
 var knex = require('knex')({
     client: 'pg',
     //version: '7.2',
@@ -14,18 +19,13 @@ var knex = require('knex')({
         database: 'test'
     }
 });
-var expressValidator = require('express-validator');
-let expressSession = require('express-session');
-var multer = require('multer')
-var upload = multer({ dest: 'uploads/' })
-var body = require('body-parser')
+
 
 app.use(logger('dev'));
 app.use(body.urlencoded({ extended: false }));
 app.use(body.json())
 app.use(expressValidator());
 app.use(expressSession({ secret: 'sasaGoat', saveUnitialized: false, resave: false }));
-
 app.use('/', express.static('../dist'))
 app.use('/www/', express.static('../www'))
 // console.log(
@@ -42,22 +42,22 @@ app.get('/', function (req, res, next) {
 
 ////////////// LOGIN PAGE///////////////////
 app.post('/login', function (req, res) {
-    console.log(req.body)
-    req.check(req.body.username, 'Invalid Username').notEmpty();
-    req.check(req.body.password, 'Invalid Password').isLength({ min: 4 });
-    req.sanitizeBody(req.body.username).toBoolean();
-    req.sanitizeBody(req.body.password).toBoolean();
-    req.getValidationResult().then(function (result) {
-        if (!result.isEmpty()) {
-            res.status(400).send('There have been validation errors: ' + util.inspect(result.array()));
-            return;
-        }
-        res.json({
-            username: req.params.username,
-            password: req.params.password
+    // console.log(req.body)
+    // req.check(req.body.username, 'Invalid Username').notEmpty();
+    // req.check(req.body.password, 'Invalid Password').isLength({ min: 4 });
+    // req.sanitizeBody(req.body.username).toBoolean();
+    // req.sanitizeBody(req.body.password).toBoolean();
+    // req.getValidationResult().then(function (result) {
+    //     if (!result.isEmpty()) {
+    //         res.status(400).send('There have been validation errors: ' + util.inspect(result.array()));
+    //         return;
+    //     }
+    //     res.json({
+    //         username: req.params.username,
+    //         password: req.params.password
 
-        });
-    });
+    //     });
+    // });
     // if(errors){
     //     console.log('theres sum errs');
     //     req.session.errors=errors;
@@ -67,13 +67,13 @@ app.post('/login', function (req, res) {
     //   req.session.success =true;
     //   console.log('success');
     // }
-    // knex('users')
-    // .insert({ username: req.body.username,
-    //           password: req.body.password })
-    // .then(function (qwer){
-    //     res.send('qwer')
-    // })
-    //res.redirect('/');
+    knex('users')
+    .insert({ username: req.body.username,
+              password: req.body.password })
+    .then(function (qwer){
+        res.send('qwer')
+    })
+    res.redirect('/');
 })
 
 
