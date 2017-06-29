@@ -16,6 +16,7 @@ import { ROUTES } from './app.routes';
 
 import { NoContentComponent } from './no-content';
 
+
 @NgModule({
   declarations: [
     AppComponent,
