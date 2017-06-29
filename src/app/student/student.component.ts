@@ -4,6 +4,7 @@
  } from '@angular/core';
  import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
+import data from '../student.services'
 
 
 @Component({
@@ -57,6 +58,9 @@ export class StudentComponent implements OnInit {
     public route: ActivatedRoute,
     private http: Http 
   ) {
+    data.firstname = 'rory';
+    console.log('====================')
+    console.log(data);
     this.http.get(this.addStudentUrl).subscribe((response)=>{
         console.log(response);
       })

@@ -18,8 +18,8 @@ var body = require('body-parser')
 app.use(body.urlencoded())
 app.use(body.json())
 
-app.use('/', express.static('dist'))
-app.use('/www/', express.static('www'))
+app.use('/', express.static('../dist'))
+app.use('/www/', express.static('../www'))
 // console.log(
 // knex('rory_table')
 // .select()
