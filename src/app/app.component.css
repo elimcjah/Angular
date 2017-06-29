@@ -81,23 +81,28 @@
   }
   .mobile-nav{
     position: absolute;
-    padding: 20px;
-    right: 0%;
-    transition: All 1s;
+    padding: 5px;
+    right: 20px;
+    top: 20px;
+    transition: All 3s;
     border: 3px solid black ;
+    min-width: 120px;
+    background-color: white;
   }
   .mobile{
     right: -1000%;
     display:none;
     
   }
-  /*.sideMenu{
-    height:200 px;
-    width: 150 px;
-    overflow: hidden;
+  .sideMenu{
+    /*height:200px;
+    width: 200px;*/
+    /*overflow: hidden;*/
     position: absolute;
     right: 5%;
-  }*/
+    display:flex;
+    
+  }
   .hamburger{
     position: absolute;
     right: 5%;

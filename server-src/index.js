@@ -35,26 +35,27 @@ app.use('/www/', express.static('www'))
 // 
 
 ////////SESSIONS////////
-// app.get('/', function (req, res, next) {
-//     res.render('/', { title: 'Form Validation', success: true, errors: req.session.errors });
-//     res.session.errors = null;
-// })
+ app.get('/', function (req, res, next) {
+     res.render('/', { title: 'Form Validation', success: true, errors: req.session.errors });
+     res.session.errors = null;
+ })
 
 ////////////// LOGIN PAGE///////////////////
 app.post('/login', function (req, res) {
-    console.log(req.body)
-    req.check(req.body.username, 'Invalid Username').notEmpty();
-    req.check(req.body.password, 'Invalid Password').isLength({ min: 4 });
-    req.sanitizeBody(req.body.username).toBoolean();
-    req.sanitizeBody(req.body.password).toBoolean();
-    req.getValidationResult().then(function (result) {
-        if (!result.isEmpty()) {
-            res.status(400).send('There have been validation errors: ' + util.inspect(result.array()));
-            return;
-        }
+    console.log(req.body);
+    //res.send('okay');
+     req.checkBody('username', 'Invalid Username').notEmpty();
+     req.checkBody('password', 'Invalid Password').isLength({ min: 4 });
+     req.sanitizeBody('username').toBoolean();
+     req.sanitizeBody('password').toBoolean();
+     req.getValidationResult().then(function (result) {
+         if (!result.isEmpty()) {
+             res.status(400).send('There have been validation errors: ' + util.inspect(result.array()));
+             return;
+         }
         res.json({
-            username: req.params.username,
-            password: req.params.password
+            username: req.body.username,
+            password: req.body.password
 
         });
     });

@@ -3,7 +3,7 @@
    OnInit
  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-//import data from '../student.services'
+import data from '../user.service'
 
 @Component({
   selector: '',

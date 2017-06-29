@@ -10,7 +10,7 @@ import { TeacherComponent } from './teacher';
 import { StudentComponent } from './student';
 import { AddStudentComponent} from'./add_student';
 import { ChartsModule } from 'ng2-charts';
-import { ChangePasswordComponent } from './change_password';
+//import { ChangePasswordComponent } from './change_password';
 import { AppComponent } from './app.component';
 import { RouterModule, PreloadAllModules} from '@angular/router';
 import { ROUTES } from './app.routes';
@@ -26,17 +26,17 @@ import { NoContentComponent } from './no-content';
     TeacherComponent,
     StudentComponent,
     AddStudentComponent,
-    ChangePasswordComponent,
+   // ChangePasswordComponent,
     NoContentComponent
       ],
   imports: [
     BrowserModule,
     FormsModule,
-    FormGroup, 
-    FormBuilder,
-    FormControl, 
-    Validators,
-    AbstractControl,
+    // FormGroup, 
+    // FormBuilder,
+    // FormControl, 
+    // Validators,
+    // AbstractControl,
     HttpModule,
     ChartsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
