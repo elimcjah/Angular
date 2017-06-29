@@ -4,6 +4,7 @@
  } from '@angular/core';
  import { Http } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
+import service from '../user.service';
 
 
 @Component({
@@ -55,11 +56,15 @@ export class StudentComponent implements OnInit {
   private addStudentUrl = 'http://www.parentingnation.in/Resources/articleimages/actual/668.jpg';
   constructor(
     public route: ActivatedRoute,
-    private http: Http 
+    private http: Http
+    
   ) {
-    this.http.get(this.addStudentUrl).subscribe((response)=>{
-        console.log(response);
-      })
+    // this.http.get(this.addStudentUrl).subscribe((response)=>{
+    //     console.log(response);
+    //   })
+      console.log('=====================');
+      console.log(service);
+      //service.increment();
     }
     getAddStudentComponent(){
       
