@@ -19,11 +19,11 @@ import { ActivatedRoute } from '@angular/router';
                 <div class="login-forms">
                     <label><b>Username</b></label>
                     <br>
-                    <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Enter Username"><br>
+                    <input [(ngModel)]="userdata.username" #ctrl="ngModel" placeholder="Enter Username"><br>
                     <br>
                     <label><b>Password</b></label>
                     <br>
-                    <input type="password" [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Enter Password"> <br>
+                    <input type="password" [(ngModel)]="userdata.password" #ctrl="ngModel" placeholder="Enter Password"> <br>
                     <br>
                     <a href="#/signup">Signup</a>
                     <br>

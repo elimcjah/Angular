@@ -3,7 +3,6 @@ const app = express()
 let logger = require('morgan');
 let util = require('util');
 let cookieParser = require('cookie-parser');
-let bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 let expressSession = require('express-session');
 var multer = require('multer')
@@ -25,58 +24,79 @@ app.use(logger('dev'));
 app.use(body.urlencoded({ extended: false }));
 app.use(body.json())
 app.use(expressValidator());
-app.use(expressSession({ secret: 'sasaGoat', saveUnitialized: false, resave: false }));
+app.use(expressSession({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false, maxAge: 360000 }
+
+
+}))
 app.use('/', express.static('../dist'))
 app.use('/www/', express.static('../www'))
-// console.log(
-// knex('rory_table')
-// .select()
-// .toString()
-// 
 
+////Auth Function that is called once the GET req. get to the express-session
+let auth = function (req, res, next) {
+    console.log(req.session);
+    if (req.session.auth) {
+        return next()
+    }
+    res.send(401)
+
+}
 ////////SESSIONS////////
 app.get('/', function (req, res, next) {
-    res.render('index', { title: 'Form Validation', success: true, errors: req.session.errors });
-    res.session.errors = null;
+    // res.render('index', { title: 'Form Validation', success: true, errors: req.session.errors });
+    // res.session.errors = null;
+    res.send('ok');
 })
+app.get('/secure', function (req, res, next) {
+    req.session.auth = true
 
+    res.send('the secret')
+})
 ////////////// LOGIN PAGE///////////////////
 app.post('/login', function (req, res) {
-    // console.log(req.body)
-    // req.check(req.body.username, 'Invalid Username').notEmpty();
-    // req.check(req.body.password, 'Invalid Password').isLength({ min: 4 });
-    // req.sanitizeBody(req.body.username).toBoolean();
-    // req.sanitizeBody(req.body.password).toBoolean();
-    // req.getValidationResult().then(function (result) {
-    //     if (!result.isEmpty()) {
-    //         res.status(400).send('There have been validation errors: ' + util.inspect(result.array()));
-    //         return;
-    //     }
-    //     res.json({
-    //         username: req.params.username,
-    //         password: req.params.password
+    console.log(req.body)
+    req.checkBody('username', 'Invalid Username').notEmpty({ min: 4, max: 40 });
+    req.checkBody('password', 'Invalid Password').isLength({ min: 4 });
+    req.sanitizeBody('username').toBoolean();
+    req.sanitizeBody('password').toBoolean();
 
-    //     });
-    // });
-    // if(errors){
-    //     console.log('theres sum errs');
-    //     req.session.errors=errors;
-    //     req.session.success =false;
-    //     console.log(errors);
-    // } else{
-    //   req.session.success =true;
-    //   console.log('success');
-    // }
-    knex('users')
-    .insert({ username: req.body.username,
-              password: req.body.password })
-    .then(function (qwer){
-        res.send('qwer')
+    var errors = req.getValidationResult().then(function (result) {
+        if (!result.isEmpty()) {
+            res.status(400).send('There have been validation errors: ' + util.inspect(result.array()));
+            return;
+        }
+
+        res.json({
+            username: req.body.username,
+            password: req.body.password
+
+        })
+        // });
+        // if(errors){
+        //     console.log('theres sum errs');
+        //     req.session.errors=errors;
+        //     req.session.success =false;
+        //     console.log(errors);
+        // } else{
+        //   req.session.success =true;
+        //   console.log('success');
+        // }
+        // knex('users')
+        //     .insert({
+        //         username: req.body.username,
+        //         password: req.body.password
+        //     })
+        //     .then(function (qwer) {
+        //         res.send('qwer')
+        //     })
+        // res.redirect('/');
     })
-    res.redirect('/');
 })
 
-
+///////////////////////////////////////
 
 app.post('/avatar', upload.single('avatar'), function (req, res, next) {
     console.log(req.file);
@@ -191,7 +211,7 @@ app.get('/student', function (req, res) {
             res.send(rows)
         })
 })
-
+//access file at localhost:3000/
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 })
