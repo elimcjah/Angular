@@ -10,7 +10,6 @@ import { ActivatedRoute } from '@angular/router';
     // style: ,
     template: `
     <body>
-<<<<<<< HEAD
     <h1 id="logintitle">Welcome Teachers & Parents</h1>
     <div style=" display:flex; justify-content: center;">
         <div style="width: 80%; border-radius: 25px; border: 2px solid #6d4c41;">
@@ -20,11 +19,19 @@ import { ActivatedRoute } from '@angular/router';
                 <div class="login-forms">
                     <label><b>Username</b></label>
                     <br>
-                    <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Enter Username"><br>
+<<<<<<< HEAD
+                    <input [(ngModel)]="userdata.username" #ctrl="ngModel" placeholder="Enter Username"><br>
                     <br>
                     <label><b>Password</b></label>
                     <br>
-                    <input type="password" [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Enter Password"> <br>
+                    <input type="password" [(ngModel)]="userdata.password" #ctrl="ngModel" placeholder="Enter Password"> <br>
+=======
+                    <input [(ngModel)]="data.username" #ctrl="ngModel" placeholder="Enter Username"><br>
+                    <br>
+                    <label><b>Password</b></label>
+                    <br>
+                    <input type="password" [(ngModel)]="data.password" #ctrl="ngModel" placeholder="Enter Password"> <br>
+>>>>>>> 308cde7b0d2cecd5ce42e878a358a90270c4f0ee
                     <br>
                     <a href="#/signup">Signup</a>
                     <br>
@@ -35,49 +42,6 @@ import { ActivatedRoute } from '@angular/router';
                     <button (click)="sub()">Submit</button>
 
                 </div>
-=======
-    <div class = "login-forms">
-    <label><b>Username</b></label>
-    <br>
-    <input type="text"[(ngModel)]="data.username" placeholder="Enter Username"><br>
-    <br>
-    <label><b>Password</b></label>
-    <br>
-    <input type="password" [(ngModel)]="data.password" placeholder="Enter Password"> <br> 
-    <br>
-    <a href="#/signup">Signup</a>
-    <br>
-    <br>
-    <input type="checkbox" checked="checked"> Remember me
-    <br>
-    <br>
-    <button (click)="login()">Submit</button>
-    
-    <style> 
-    @media screen and (max-width: 460px) {
-    * {
-        background-color: lightgreen;
-    }
-}
-
-</style>        
-            <h1 id="logintitle">Welcome Teachers and Parents</h1>
-            <h2> Please login below to access your class</h2>
-        
-
-       
-        <div>
-            <div class="col-2"> </div>
-            <div class="login-forms col-4">
-                <input [(ngModel)]="data.username" #ctrl="ngModel" placeholder="Your Login"><br>
-                <br>
-                <input password [(ngModel)]="data.password" #ctrl="ngModel" placeholder="Your Password"> <br>
-                <br>
-                <br>
-                <button (click)="clicked()">Submit</button>
-            </div>
-            <div class="col-6"> </div>
->>>>>>> 210052b282005b37762924440684024d785b74f6
         </div>
     </div>
 
@@ -96,9 +60,9 @@ import { ActivatedRoute } from '@angular/router';
                     <div>
                         <div class="col-2"> </div>
                         <div class="login-forms col-4">
-                            <input [(ngModel)]="userdata.usname" #ctrl="ngModel" placeholder="Your Login"><br>
+                            <input [(ngModel)]="data.username" #ctrl="ngModel" placeholder="Your Login"><br>
                             <br>
-                            <input password [(ngModel)]="userdata.pass" #ctrl="ngModel" placeholder="Your Password"> <br>
+                            <input password [(ngModel)]="data.password" #ctrl="ngModel" placeholder="Your Password"> <br>
                             <br>
                             <br>
                             <button (click)="clicked()">Submit</button>
