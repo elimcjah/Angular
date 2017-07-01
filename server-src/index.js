@@ -34,6 +34,35 @@ app.use('/www/', express.static('www'))
 // .toString()
 // 
 
+//////////////////SASA SESSION////////////////////
+
+
+var bodyParser = require('body-parser');
+app.use(expressSession({
+    secret: 'dagoat',
+    resave: false, 
+    saveUninitialized: true, 
+    cookie: {secure: true}
+}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+const auth = function (req, res, next){
+    if (req.session.view){
+        return next();
+    } res.send(401);
+    
+}
+app.get('/sasa', auth, function (req, res, next) {
+    res.send(req.session);
+    console.log(req.session);
+})
+
+app.get('/secure', function (req, res, next) {
+    req.session.view = true;
+    res.send('okay')
+})
+
+
 ////////SESSIONS////////
  app.get('/', function (req, res, next) {
      res.render('/', { title: 'Form Validation', success: true, errors: req.session.errors });
